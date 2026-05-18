@@ -111,63 +111,9 @@
             </div>
         </section>
 
-        <!-- FORMULARIO + MAPA -->
-        <section class="section section-alt" id="formulario" aria-labelledby="formTitle">
-            <div class="container contact-layout">
-
-                <div class="contact-form-wrap reveal">
-                    <span class="eyebrow">Pide tu cita</span>
-                    <h2 id="formTitle">Escríbenos un mensaje</h2>
-                    <p>Cuéntanos qué necesitas y nos pondremos en contacto contigo lo antes posible.</p>
-
-                    <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Nombre completo *</label>
-                                <input type="text" id="name" name="name" required placeholder="Tu nombre">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Teléfono *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="666 000 000">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="tu@email.com">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Servicio de interés</label>
-                            <select id="service" name="service">
-                                <option value="">Selecciona una opción</option>
-                                <option value="gafas">Gafas graduadas / de sol</option>
-                                <option value="lentillas">Lentes de contacto</option>
-                                <option value="audifonos">Audífonos / Audiometría</option>
-                                <option value="tension">Toma de tensión ocular</option>
-                                <option value="miopia">Control de miopía</option>
-                                <option value="reparacion">Reparación de gafas</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Mensaje *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="¿En qué podemos ayudarte?"></textarea>
-                        </div>
-
-                        <div class="form-group form-check">
-                            <input type="checkbox" id="privacy" name="privacy" required>
-                            <label for="privacy">Acepto la política de privacidad y el tratamiento de mis datos para responder a la consulta.</label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fa-regular fa-paper-plane"></i> Enviar mensaje
-                        </button>
-
-                        <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
-                    </form>
-                </div>
+        <!-- MAPA + INFO -->
+        <section class="section section-alt" id="ubicacion" aria-labelledby="visitTitle">
+            <div class="container contact-layout contact-layout-single">
 
                 <div class="contact-side reveal">
                     <div class="contact-map">
@@ -184,8 +130,8 @@
                     </div>
 
                     <div class="contact-side-info">
-                        <h3>Visítanos</h3>
-                        <p>Estamos en pleno corazón de Alicante. Pásate a saludarnos y descubre nuestra colección de gafas y nuestros servicios de audiología.</p>
+                        <h2 id="visitTitle">Visítanos</h2>
+                        <p>Estamos en pleno corazón de la Playa de San Juan, en Alicante. Pásate a saludarnos y descubre nuestra colección de gafas y nuestros servicios de audiología.</p>
                         <ul class="footer-list footer-contact">
                             <li><i class="fa-solid fa-location-dot"></i> Avenida Condomina 36, Alicante</li>
                             <li><i class="fa-solid fa-phone"></i> <a href="tel:+34966385485">966 385 485</a></li>
