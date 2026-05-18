@@ -1161,6 +1161,13 @@ p {
     align-items: start;
 }
 
+.contact-layout-single {
+    grid-template-columns: 1fr;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .contact-form-wrap {
     background: var(--color-white);
     padding: 2.5rem;
@@ -1293,6 +1300,7 @@ p {
     border: 1px solid var(--color-border);
 }
 
+.contact-side-info h2,
 .contact-side-info h3 {
     margin-bottom: 0.6rem;
 }
@@ -1471,9 +1479,11 @@ p {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
-    .grid-2.reverse > div:first-child,
-    .service-item.reverse .service-image {
+    .grid-2.reverse > div:first-child {
         order: 0;
+    }
+    .service-item .service-image {
+        order: 2;
     }
 }
 
