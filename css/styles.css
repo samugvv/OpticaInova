@@ -523,7 +523,6 @@ p {
 .intro-image {
     aspect-ratio: 1;
     border-radius: var(--radius-lg);
-    background: url('../img/inicio1.webp') center center / cover no-repeat;
     box-shadow: var(--shadow-lg);
     position: relative;
     overflow: hidden;
@@ -877,20 +876,11 @@ p {
     aspect-ratio: 4 / 3;
 }
 
-.gallery-photo-graduadas {
-    background: url('../img/gafasgraduadas.webp') center center / cover no-repeat;
-}
-
-.gallery-photo-sol {
-    background: url('../img/gafassol.webp') center center / cover no-repeat;
-}
-
-.gallery-photo-infantiles {
-    background: url('../img/gafasinfantiles.webp') center top / cover no-repeat;
-}
-
+.gallery-photo-graduadas,
+.gallery-photo-sol,
+.gallery-photo-infantiles,
 .gallery-photo-montura {
-    background: url('../img/gafasmontura.webp') center center / cover no-repeat;
+    /* background cargado vía data-bg (lazy) */
 }
 
 
@@ -1158,7 +1148,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .contact-layout-single {
@@ -1285,7 +1275,7 @@ p {
 }
 
 .contact-map {
-    aspect-ratio: 4 / 3;
+    min-height: 380px;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow);

@@ -170,6 +170,27 @@
         }
     }
 
+    // ===== Lazy load de fondos CSS (data-bg) =====
+    const lazyBgs = document.querySelectorAll('[data-bg]');
+    if (lazyBgs.length) {
+        if ('IntersectionObserver' in window) {
+            const bgObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.setAttribute('style', entry.target.dataset.bg);
+                            bgObserver.unobserve(entry.target);
+                        }
+                    });
+                },
+                { rootMargin: '300px 0px' }
+            );
+            lazyBgs.forEach((el) => bgObserver.observe(el));
+        } else {
+            lazyBgs.forEach((el) => { el.setAttribute('style', el.dataset.bg); });
+        }
+    }
+
     // ===== Smooth scroll para enlaces internos #seccion =====
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener('click', (e) => {
